@@ -1,38 +1,30 @@
 #include "math_func.h"
 #include <stdio.h>
 
-//logic of operations
+//operation logic
 
-double sum (double a, double b) {
-    return a + b;
-}
-
-double diff (double a, double b) {
-    return a - b;
-}
-
-double mult (double a, double b) {
-    return a * b;
-}
-
-double div (double a, double b) {
-    return a / b;
-}
+double sum(double a, double b){ return a + b; }
+double diff(double a, double b){ return a - b; }
+double mult(double a, double b){ return a * b; }
+double divide(double a, double b) { return a / b; }
 
 // logic of output
 
 void smart_out (double a, double b, char operator) {
     if (operator == '+') {
-        printf("%lf + %lf = %.2f\n", a, b, sum(a,b));
+        printf("%.6g + %.6g = %.6g\n", a, b, sum(a,b));
     } else if (operator == '-') {
-        printf("%lf - %lf == %.2f\n", a, b, diff(a,b));
+        printf("%.6g + %.6g = %.6g\n", a, b, diff(a,b));
     } else if (operator == '*') {
-        printf("%lf * %lf = %.2f\n", a, b, mult(a,b));
+        printf("%.6g + %.6g = %.6g\n", a, b, mult(a,b));
     } else if (operator == '/') {
-        printf("%lf / %lf = %.2f\n", a, b, div(a,b));
+        if (b == 0){
+           printf("Error: Division by Zero\n");
+        } else {
+            printf("%.6g + %.6g = %.6g\n", a, b, divide(a,b));
+        }    
+        
+    } else {
+        printf("What is it?\n");
     }
-}
-
-void error_input (char ReasonError[]) {
-    printf("Error input (%s)\n", ReasonError);
 }
