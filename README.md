@@ -1,2 +1,2 @@
-# C-tasks
+# AMAM
 Simple Calculator on C +-*/
