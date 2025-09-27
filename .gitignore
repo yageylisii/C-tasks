@@ -50,7 +50,7 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-main
+Simple_Calculator/main
 
 # debug information files
 *.dwo
